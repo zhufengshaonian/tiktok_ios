@@ -1,0 +1,9 @@
+[URL Rewrite]
+(?<=_region=)CN(?=&) JP 307
+(?<=&mcc_mnc=)4 2 307
+^(https?:\/\/(tnc|dm)[\w-]+\.\w+\.com\/.+)(\?)(.+) $1$3 302
+(^https?:\/\/*\.\w{4}okv.com\/.+&.+)(\d{2}\.3\.\d)(.+) $118.0$3 302
+
+[MITM]
+hostname = *.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com
+  提示：如果需要换区，将[URL Rewrite]第一行的JP换成其他国家代码（例如US/UK/TW/KR）即可。
